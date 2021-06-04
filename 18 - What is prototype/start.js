@@ -14,6 +14,7 @@
   // 3. Prototype chain
   const name = "Varayut";
   console.log(name.toString());
+  console.log(name.toLocaleString()); // find this method from parent __proto__
   console.log(name.__proto__);
   console.log(name.__proto__.__proto__);
 
@@ -22,6 +23,6 @@
   function sayHello(val) {
     console.log(`Hello ${val}`);
   }
-  String.prototype.sayHello = sayHello;
+  String.prototype.sayHello = sayHello; //add say Hello to protostype of string
   name.sayHello("World");
 })();
